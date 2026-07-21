@@ -103,7 +103,52 @@
             <button class="buy-btn">خریدیں</button>
         </div>
 
-    </div</b></body>ody>
+    </div</b></body>ody><!-- آرڈرز اور ایڈریس کا سیکشن -->
+<div class="product-card" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; max-width: 320px; text-align: center; background: #fff; margin: 20px auto; font-family: Arial, sans-serif;">
+    <h3>آن لائن آرڈر فارم</h3>
+    <p>اپنی پسندیدہ چیز کا پتہ درج کریں</p>
+    
+    <!-- بٹنز -->
+    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+        <button onclick="openForm()" style="background: #ffc107; color: #000; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Add to Cart</button>
+        <button onclick="openForm()" style="background: #28a745; color: #fff; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Buy Now</button>
+    </div>
+
+    <!-- ایڈریس والا فارم (جو شروع میں چھپا ہوگا) -->
+    <div id="orderForm" style="display: none; margin-top: 20px; text-align: left; background: #f9f9f9; padding: 15px; border-radius: 5px;">
+        <label style="font-size: 14px; font-weight: bold;">اپنا مکمل پتہ (Address) لکھیں:</label><br>
+        <textarea id="custAddress" placeholder="گھر کا نمبر، محلہ، شہر..." style="width: 100%; height: 60px; margin-top: 5px; padding: 5px;"></textarea><br><br>
+        
+        <label style="font-size: 14px; font-weight: bold;">فون نمبر:</label><br>
+        <input type="text" id="custPhone" placeholder="03XXXXXXXXX" style="width: 100%; padding: 5px; margin-top: 5px;"><br><br>
+        
+        <button onclick="submitOrder()" style="background: #007bff; color: white; border: none; padding: 8px 15px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold;">آرڈر سبمٹ کریں</button>
+    </div>
+</div>
+
+<!-- جاوا اسکرپٹ کوڈ جو بٹن کو چلائے گا -->
+<script>
+function openForm() {
+    var form = document.getElementById("orderForm");
+    if (form.style.display === "none") {
+        form.style.display = "block";
+    } else {
+        form.style.display = "none";
+    }
+}
+
+function submitOrder() {
+    var address = document.getElementById("custAddress").value;
+    var phone = document.getElementById("custPhone").value;
+    if(address === "" || phone === "") {
+        alert("برائے مہربانی اپنا پتہ اور فون نمبر درج کریں!");
+    } else {
+        alert("شکریہ! آپ کا آرڈر موصول ہو گیا ہے۔ ہم جلد آپ سے رابطہ کریں گے۔");
+        document.getElementById("orderForm").style.display = "none";
+    }
+}
+</script>
+
 </html><div class="product-card" style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; max-width: 300px; text-align: center; background: #fff; margin: 10px auto;">
     <!-- یہاں آپ کی پروڈکٹ کی تصویر اور نام ہوگا -->
     <h3>آپ کی پروڈکٹ</h3>
