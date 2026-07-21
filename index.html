@@ -1,163 +1,192 @@
 <!DOCTYPE html>
 <html lang="ur">
-<head><meta name="google-site-verification" content="thdhNv5Z8OMmt4hkBybMsqiaY4019L4BkkuKgLlhkKA" />
+<head><meta name="google-site-verification" content="thdhNv5Z8OMmt4hkBybMsqiaY4019L4BkkuKgLlhkKA" /<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>میرا آن لائن اسٹور</title>
+    <title>آن لائن اسٹور</title>
     <style>
-        /* بنیادی اسٹائلنگ */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
             text-align: center;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-        }
         h1 {
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        /* پروڈکٹ کارڈ کا ڈیزائن */
-        .product-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 250px;
-            margin: 15px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .product-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        .product-card h3 {
-            margin: 10px 0 5px 0;
             color: #333;
         }
-        .price {
-            color: #e44d26;
+        .store-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .product-price {
+            color: #d9534f;
             font-weight: bold;
             font-size: 18px;
             margin-bottom: 15px;
         }
-        /* خریدنے والا بٹن */
         .buy-btn {
-            background-color: #28a745;
+            background: #28a745;
             color: white;
             border: none;
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
         }
         .buy-btn:hover {
-            background-color: #218838;
+            background: #218838;
+        }
+        /* پاپ اپ آرڈر فارم اسٹائل */
+        #globalOrderForm {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px -4px 15px rgba(0,0,0,0.2);
+            text-align: right;
+            box-sizing: border-box;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+        #globalOrderForm input, #globalOrderForm textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            flex: 1;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .close-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <!-- ویب سائٹ کا ہیڈر -->
-    <header>
-        <h1>خوش آمدید - میرا آن لائن اسٹور</h1>
-        <p>بہترین اور معیاری اشیاء مناسب داموں پر</p>
-    </header>
+    <h1>خوش آمدید! ہمارا آن لائن اسٹور</h1>
+    <p>اپنی پسندیدہ چیز منتخب کریں اور آرڈر کریں</p>
 
-    <!-- پروڈکٹس کا سیکشن -->
-    <div class="container">
-
-        <!-- پہلی پروڈکٹ -->
+    <!-- پروڈکٹس کی لسٹ -->
+    <div class="store-container">
+        
+        <!-- پروڈکٹ 1 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="واچ">
-            <h3>شاندار گھڑی (Watch)</h3>
-            <div class="price">روپے 3,500</div>
-            <button class="buy-btn">خریدیں</button>
-        </div>
-
-        <!-- دوسری پروڈکٹ -->
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="ہیڈ فون">
             <h3>اسمارٹ ہیڈ فون</h3>
-            <div class="price">روپے 4,200</div>
-            <button class="buy-btn">خریدیں</button>
+            <div class="product-price">4,200 روپے</div>
+            <button class="buy-btn" onclick="selectProduct(this)">خریدیں (Buy Now)</button>
         </div>
 
-        <!-- تیسری پروڈکٹ -->
+        <!-- پروڈکٹ 2 -->
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="جوتے">
             <h3>اسپورٹس شوز</h3>
-            <div class="price">روپے 6,000</div>
-            <button class="buy-btn">خریدیں</button>
+            <div class="product-price">6,000 روپے</div>
+            <button class="buy-btn" onclick="selectProduct(this)">خریدیں (Buy Now)</button>
         </div>
 
-    </div</b></body>ody><!-- آرڈرز اور ایڈریس کا سیکشن -->
-<div class="product-card" style="border: 1px solid #ddd; padding: 20px; border-radius: 8px; max-width: 320px; text-align: center; background: #fff; margin: 20px auto; font-family: Arial, sans-serif;">
-    <h3>آن لائن آرڈر فارم</h3>
-    <p>اپنی پسندیدہ چیز کا پتہ درج کریں</p>
-    
-    <!-- بٹنز -->
-    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
-        <button onclick="openForm()" style="background: #ffc107; color: #000; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Add to Cart</button>
-        <button onclick="openForm()" style="background: #28a745; color: #fff; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Buy Now</button>
+        <!-- پروڈکٹ 3 -->
+        <div class="product-card">
+            <h3>اسمارٹ واچ</h3>
+            <div class="product-price">3,500 روپے</div>
+            <button class="buy-btn" onclick="selectProduct(this)">خریدیں (Buy Now)</button>
+        </div>
+
     </div>
 
-    <!-- ایڈریس والا فارم (جو شروع میں چھپا ہوگا) -->
-    <div id="orderForm" style="display: none; margin-top: 20px; text-align: left; background: #f9f9f9; padding: 15px; border-radius: 5px;">
-        <label style="font-size: 14px; font-weight: bold;">اپنا مکمل پتہ (Address) لکھیں:</label><br>
-        <textarea id="custAddress" placeholder="گھر کا نمبر، محلہ، شہر..." style="width: 100%; height: 60px; margin-top: 5px; padding: 5px;"></textarea><br><br>
+    <!-- آرڈر کا چھپا ہوا فارم جو کلک کرنے پر شو ہوگا -->
+    <div id="globalOrderForm">
+        <h3>آرڈر کی تفصیلات</h3>
+        <p>منتخب کردہ پروڈکٹ: <span id="selectedProduct" style="color: #d9534f; font-weight: bold;"></span></p>
         
-        <label style="font-size: 14px; font-weight: bold;">فون نمبر:</label><br>
-        <input type="text" id="custPhone" placeholder="03XXXXXXXXX" style="width: 100%; padding: 5px; margin-top: 5px;"><br><br>
+        <label>اپنا مکمل پتہ (Address) لکھیں:</label>
+        <textarea id="finalAddress" placeholder="گھر کا نمبر، محلہ، شہر..."></textarea>
         
-        <button onclick="submitOrder()" style="background: #007bff; color: white; border: none; padding: 8px 15px; width: 100%; border-radius: 5px; cursor: pointer; font-weight: bold;">آرڈر سبمٹ کریں</button>
+        <label>فون نمبر:</label>
+        <input type="text" id="finalPhone" placeholder="03XXXXXXXXX">
+        
+        <div class="form-actions">
+            <button class="submit-btn" onclick="confirmOrder()">آرڈر پکا کریں</button>
+            <button class="close-btn" onclick="closeGlobalForm()">بند کریں</button>
+        </div>
     </div>
-</div>
 
-<!-- جاوا اسکرپٹ کوڈ جو بٹن کو چلائے گا -->
-<script>
-function openForm() {
-    var form = document.getElementById("orderForm");
-    if (form.style.display === "none") {
-        form.style.display = "block";
-    } else {
-        form.style.display = "none";
-    }
-}
+    <!-- جاوا اسکرپٹ کوڈ -->
+    <script>
+        let chosenItem = "";
 
-function submitOrder() {
-    var address = document.getElementById("custAddress").value;
-    var phone = document.getElementById("custPhone").value;
-    if(address === "" || phone === "") {
-        alert("برائے مہربانی اپنا پتہ اور فون نمبر درج کریں!");
-    } else {
-        alert("شکریہ! آپ کا آرڈر موصول ہو گیا ہے۔ ہم جلد آپ سے رابطہ کریں گے۔");
-        document.getElementById("orderForm").style.display = "none";
-    }
-}
-</script>
+        function selectProduct(button) {
+            let card = button.parentElement;
+            let productName = card.querySelector("h3").innerText;
+            let productPrice = card.querySelector(".product-price").innerText;
+            
+            chosenItem = productName + " (" + productPrice + ")";
+            
+            document.getElementById("selectedProduct").innerText = chosenItem;
+            document.getElementById("globalOrderForm").style.display = "block";
+        }
 
-</html><div class="product-card" style="border: 1px solid #ddd; padding: 15px; border-radius: 8px; max-width: 300px; text-align: center; background: #fff; margin: 10px auto;">
-    <!-- یہاں آپ کی پروڈکٹ کی تصویر اور نام ہوگا -->
-    <h3>آپ کی پروڈکٹ</h3>
-    <p>شاندار معیار اور بہترین قیمت</p>
-    
-    <!-- Add to Cart اور Buy Now کے بٹن -->
-    <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
-        <button onclick="addToCart()" style="background: #ffc107; color: #000; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Add to Cart</button>
-        <button onclick="buyNow()" style="background: #28a745; color: #fff; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Buy Now</button>
-    </div>
-</div>
+        function closeGlobalForm() {
+            document.getElementById("globalOrderForm").style.display = "none";
+        }
 
+        function confirmOrder() {
+            let address = document.getElementById("finalAddress").value;
+            let phone = document.getElementById("finalPhone").value;
+            
+            if(address === "" || phone === "") {
+                alert("برائے مہربانی اپنا پتہ اور فون نمبر درج کریں!");
+            } else {
+                alert("مبارک ہو! آپ کا آرڈر (" + chosenItem + ") کامیابی سے موصول ہو گیا ہے۔");
+                document.getElementById("globalOrderForm").style.display = "none";
+                // فارم صاف کرنے کے لیے
+                document.getElementById("finalAddress").value = "";
+                document.getElementById("finalPhone").value = "";
+            }
+        }
+    </script>
+
+</body>
+</html>
