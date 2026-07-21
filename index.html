@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>میرا آن لائن اسٹور</title>
+    <style>
+        /* بنیادی اسٹائلنگ */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        /* پروڈکٹ کارڈ کا ڈیزائن */
+        .product-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            margin: 15px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px 0;
+            color: #333;
+        }
+        .price {
+            color: #e44d26;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        /* خریدنے والا بٹن */
+        .buy-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .buy-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ویب سائٹ کا ہیڈر -->
+    <header>
+        <h1>خوش آمدید - میرا آن لائن اسٹور</h1>
+        <p>بہترین اور معیاری اشیاء مناسب داموں پر</p>
+    </header>
+
+    <!-- پروڈکٹس کا سیکشن -->
+    <div class="container">
+
+        <!-- پہلی پروڈکٹ -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="واچ">
+            <h3>شاندار گھڑی (Watch)</h3>
+            <div class="price">روپے 3,500</div>
+            <button class="buy-btn">خریدیں</button>
+        </div>
+
+        <!-- دوسری پروڈکٹ -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="ہیڈ فون">
+            <h3>اسمارٹ ہیڈ فون</h3>
+            <div class="price">روپے 4,200</div>
+            <button class="buy-btn">خریدیں</button>
+        </div>
+
+        <!-- تیسری پروڈکٹ -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="جوتے">
+            <h3>اسپورٹس شوز</h3>
+            <div class="price">روپے 6,000</div>
+            <button class="buy-btn">خریدیں</button>
+        </div>
+
+    </div>
+
+</body>
+</html>
